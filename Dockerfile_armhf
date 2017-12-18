@@ -1,0 +1,18 @@
+ARG ARCH=frommakefile
+ARG DOCKERSRC=frommakefile
+ARG USERNAME=frommakefile
+#
+FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
+#
+ARG PUID=1000
+ARG PGID=1000
+ARG JVVMAJOR=8
+ENV LANG=C.UTF-8
+#
+RUN addgroup -g ${PGID} -S alpine && \
+    adduser -u ${PUID} -G alpine -h /home/alpine -D alpine
+RUN set -xe \
+    apk add -uU --no-cache curl ca-certificates openjdk${JVVMAJOR}-jre-base && \
+    rm -rf /var/cache/apk/* /tmp/*
+# ENTRYPOINT ["/init"]
+# ENTRYPOINT ["/usr/bin/java"]
