@@ -14,5 +14,6 @@ RUN addgroup -g ${PGID} -S alpine && \
 RUN set -xe && \
     apk add -uU --no-cache curl ca-certificates openjdk${JVVMAJOR}-jre-base && \
     rm -rf /var/cache/apk/* /tmp/*
+ENV JAVA_HOME /usr/lib/jvm/java-1.${JVVMAJOR}-openjdk
 # ENTRYPOINT ["/init"]
 # ENTRYPOINT ["/usr/bin/java"]
