@@ -58,7 +58,8 @@ architecture, e.g for an x86_64 machine..
 # make
 docker run --rm -it \
   --name docker_openjdk --hostname openjdk \
-  woahbase/alpine-openjdk:x86_64_8
+  woahbase/alpine-openjdk:x86_64_8 \
+  bash
 
 # make stop
 docker stop -t 2 docker_openjdk
