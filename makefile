@@ -27,7 +27,7 @@ BUILDFLAGS := --rm --force-rm --compress -f $(CURDIR)/Dockerfile_$(ARCH) -t $(IM
 	--build-arg PGID=$(PGID) \
 	--build-arg JVVMAJOR=$(JVVMAJOR) \
 	--label org.label-schema.build-date=$(shell date -u +"%Y-%m-%dT%H:%M:%SZ") \
-	--label org.label-schema.name=$(DOCKEREPO) \
+	--label org.label-schema.name=$(DOCKEREPO)$(JVVMAJOR) \
 	--label org.label-schema.schema-version="1.0" \
 	--label org.label-schema.url="https://woahbase.online/" \
 	--label org.label-schema.usage="https://woahbase.online/\#/images/$(DOCKEREPO)" \
@@ -86,7 +86,7 @@ stop :
 	docker stop -t 2 docker_$(SVCNAME)
 
 test :
-	# test armhf in travis hangs 
+	# test armhf in travis hangs
 	if [ "$(ARCH)" != "armhf" ]; then docker run --rm -it $(NAMEFLAGS) $(RUNFLAGS) $(PORTFLAGS) $(MOUNTFLAGS) $(OTHERFLAGS) $(IMAGETAG) sh -ec 'java -version'; fi;
 
 # -- }}}
