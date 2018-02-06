@@ -67,7 +67,13 @@ pull :
 	docker pull $(IMAGETAG)
 
 push :
-	docker push $(IMAGETAG)
+	docker push $(IMAGETAG); \
+	if [ "$(ARCH)" = "$(HOSTARCH)" ]; \
+		then \
+		LATESTTAG=$$(echo $(IMAGETAG) | sed 's/:$(ARCH)/:latest/'); \
+		docker tag $(IMAGETAG) $${LATESTTAG}; \
+		docker push $${LATESTTAG}; \
+	fi;
 
 restart :
 	docker ps -a | grep 'docker_$(CNTNAME)' -q && docker restart docker_$(CNTNAME) || echo "Service not running.";
