@@ -14,11 +14,11 @@ Based on [Alpine Linux][131] with GNU Libc support from my
 These images are tagged respectively for the following architectures,
 * [OpenJDK 7][136]
     * **armhf**
-    * **x86_64**
+    * **x86_64** (retagged as the `latest` )
 
 * [OpenJDK 8][137]
     * **armhf**
-    * **x86_64**
+    * **x86_64** (retagged as the `latest` )
 
 **armhf** builds have embedded binfmt_misc support and contain the
 [qemu-user-static][105] binary that allows for running it also inside
