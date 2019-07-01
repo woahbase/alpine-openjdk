@@ -1,11 +1,21 @@
-[![build status][251]][232] [![commit][255]][231] [![version:x86_64][256]][235] [![size:x86_64][257]][235] [![version:armhf][258]][236] [![size:armhf][259]][236]
+[![build status][251]][232] [![commit][255]][231]
+
+7 : [![version:x86_64][256]][235] [![size:x86_64][257]][235] [![version:armhf][258]][236] [![size:armhf][259]][236] [![version:armv7l][260]][237] [![size:armv7l][261]][237] [![version:aarch64][262]][238] [![size:aarch64][263]][238]
+
+8 : [![version:x86_64][356]][335] [![size:x86_64][357]][335] [![version:armhf][358]][336] [![size:armhf][359]][336] [![version:armv7l][360]][337] [![size:armv7l][361]][337] [![version:aarch64][362]][338] [![size:aarch64][363]][338]
+
+9 : [![version:x86_64][456]][435] [![size:x86_64][457]][435] [![version:armhf][458]][436] [![size:armhf][459]][436] [![version:armv7l][460]][437] [![size:armv7l][461]][437] [![version:aarch64][462]][438] [![size:aarch64][463]][438]
+
+10 : [![version:x86_64][556]][535] [![size:x86_64][557]][535] [![version:armhf][558]][536] [![size:armhf][559]][536] [![version:armv7l][560]][537] [![size:armv7l][561]][537] [![version:aarch64][562]][538] [![size:aarch64][563]][538]
+
+11 : [![version:x86_64][656]][635] [![size:x86_64][657]][635] [![version:armhf][658]][636] [![size:armhf][659]][636] [![version:armv7l][660]][637] [![size:armv7l][661]][637] [![version:aarch64][662]][638] [![size:aarch64][663]][638]
 
 ## [Alpine-OpenJDK][234]
-#### Container for Alpine Linux + S6 + OpenJDK (JRE-Base)
+#### Container for Alpine Linux + S6 + OpenJDK (JRE-Base or Headless)
 ---
 
 This [image][233] serves as the base image for applications
-/ services that require [OpenJDK][135] 7 or 8.
+/ services that require an [OpenJDK][135] runtime.
 
 Based on [Alpine Linux][131] with GNU Libc support from my
 [alpine-glibc][132] image with the [s6][133] init system
@@ -14,15 +24,31 @@ Based on [Alpine Linux][131] with GNU Libc support from my
 These images are tagged respectively for the following architectures,
 * [OpenJDK 7][136]
     * **armhf**
+    * **armv7l**
+    * **aarch64**
     * **x86_64** (retagged as the `latest` )
 
 * [OpenJDK 8][137]
     * **armhf**
+    * **armv7l**
+    * **aarch64**
     * **x86_64** (retagged as the `latest` )
 
-**armhf** builds have embedded binfmt_misc support and contain the
+* [OpenJDK 9][138]
+    * **aarch64**
+    * **x86_64** (retagged as the `latest` )
+
+* [OpenJDK 10][139]
+    * **aarch64**
+    * **x86_64** (retagged as the `latest` )
+
+* [OpenJDK 11][140]
+    * **aarch64**
+    * **x86_64** (retagged as the `latest` )
+
+**non-x86_64** builds have embedded binfmt_misc support and contain the
 [qemu-user-static][105] binary that allows for running it also inside
-an x64 environment that has it.
+an x86_64 environment that has it.
 
 ---
 #### Get the Image
@@ -98,14 +124,14 @@ docker restart docker_openjdk
 Get a shell inside a already running container,
 
 ```
-# make shell
+# make debug
 docker exec -it docker_openjdk /bin/bash
 ```
 
 set user or login as root,
 
 ```
-# make rshell
+# make rdebug
 docker exec -u root -it docker_openjdk /bin/bash
 ```
 
@@ -155,12 +181,10 @@ for other architectures.]
 docker build --rm --compress --force-rm \
   --no-cache=true --pull \
   -f ./Dockerfile_x86_64 \
-  --build-arg ARCH=x86_64 \
-  --build-arg DOCKERSRC=alpine-glibc \
+  --build-arg DOCKERSRC=woahbase/alpine-glibc:x86_64 \
   --build-arg JVVMAJOR=8 \
   --build-arg PGID=1000 \
   --build-arg PUID=1000 \
-  --build-arg USERNAME=woahbase \
   -t woahbase/alpine-openjdk8:x86_64 \
   .
 ```
@@ -208,6 +232,9 @@ Maintained by [WOAHBase][204].
 [135]: http://openjdk.java.net/
 [136]: https://hub.docker.com/r/woahbase/alpine-openjdk7
 [137]: https://hub.docker.com/r/woahbase/alpine-openjdk8
+[138]: https://hub.docker.com/r/woahbase/alpine-openjdk9
+[139]: https://hub.docker.com/r/woahbase/alpine-openjdk10
+[140]: https://hub.docker.com/r/woahbase/alpine-openjdk11
 
 [201]: https://github.com/woahbase
 [202]: https://travis-ci.org/woahbase/
@@ -218,15 +245,95 @@ Maintained by [WOAHBase][204].
 [232]: https://travis-ci.org/woahbase/alpine-openjdk
 [233]: https://hub.docker.com/r/woahbase/alpine-openjdk8
 [234]: https://woahbase.online/#/images/alpine-openjdk
-[235]: https://microbadger.com/images/woahbase/alpine-openjdk8:x86_64
-[236]: https://microbadger.com/images/woahbase/alpine-openjdk8:armhf
+[235]: https://microbadger.com/images/woahbase/alpine-openjdk7:x86_64
+[236]: https://microbadger.com/images/woahbase/alpine-openjdk7:armhf
+[237]: https://microbadger.com/images/woahbase/alpine-openjdk7:armv7l
+[238]: https://microbadger.com/images/woahbase/alpine-openjdk7:aarch64
 
 [251]: https://travis-ci.org/woahbase/alpine-openjdk.svg?branch=master
 
 [255]: https://images.microbadger.com/badges/commit/woahbase/alpine-openjdk.svg
 
-[256]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:x86_64.svg
-[257]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:x86_64.svg
+[256]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk7:x86_64.svg
+[257]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk7:x86_64.svg
 
-[258]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:armhf.svg
-[259]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:armhf.svg
+[258]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk7:armhf.svg
+[259]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk7:armhf.svg
+
+[260]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk7:armv7l.svg
+[261]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk7:armv7l.svg
+
+[262]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk7:aarch64.svg
+[263]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk7:aarch64.svg
+
+
+[335]: https://microbadger.com/images/woahbase/alpine-openjdk8:x86_64
+[336]: https://microbadger.com/images/woahbase/alpine-openjdk8:armhf
+[337]: https://microbadger.com/images/woahbase/alpine-openjdk8:armv7l
+[338]: https://microbadger.com/images/woahbase/alpine-openjdk8:aarch64
+
+[356]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:x86_64.svg
+[357]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:x86_64.svg
+
+[358]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:armhf.svg
+[359]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:armhf.svg
+
+[360]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:armv7l.svg
+[361]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:armv7l.svg
+
+[362]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk8:aarch64.svg
+[363]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk8:aarch64.svg
+
+
+[435]: https://microbadger.com/images/woahbase/alpine-openjdk9:x86_64
+[436]: https://microbadger.com/images/woahbase/alpine-openjdk9:armhf
+[437]: https://microbadger.com/images/woahbase/alpine-openjdk9:armv7l
+[438]: https://microbadger.com/images/woahbase/alpine-openjdk9:aarch64
+
+[456]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk9:x86_64.svg
+[457]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk9:x86_64.svg
+
+[458]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk9:armhf.svg
+[459]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk9:armhf.svg
+
+[460]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk9:armv7l.svg
+[461]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk9:armv7l.svg
+
+[462]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk9:aarch64.svg
+[463]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk9:aarch64.svg
+
+
+[535]: https://microbadger.com/images/woahbase/alpine-openjdk10:x86_64
+[536]: https://microbadger.com/images/woahbase/alpine-openjdk10:armhf
+[537]: https://microbadger.com/images/woahbase/alpine-openjdk10:armv7l
+[538]: https://microbadger.com/images/woahbase/alpine-openjdk10:aarch64
+
+[556]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk10:x86_64.svg
+[557]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk10:x86_64.svg
+
+[558]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk10:armhf.svg
+[559]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk10:armhf.svg
+
+[560]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk10:armv7l.svg
+[561]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk10:armv7l.svg
+
+[562]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk10:aarch64.svg
+[563]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk10:aarch64.svg
+
+
+[635]: https://microbadger.com/images/woahbase/alpine-openjdk11:x86_66
+[636]: https://microbadger.com/images/woahbase/alpine-openjdk11:armhf
+[637]: https://microbadger.com/images/woahbase/alpine-openjdk11:armv7l
+[638]: https://microbadger.com/images/woahbase/alpine-openjdk11:aarch64
+
+[656]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk11:x86_64.svg
+[657]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk11:x86_64.svg
+
+[658]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk11:armhf.svg
+[659]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk11:armhf.svg
+
+[660]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk11:armv7l.svg
+[661]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk11:armv7l.svg
+
+[662]: https://images.microbadger.com/badges/version/woahbase/alpine-openjdk11:aarch64.svg
+[663]: https://images.microbadger.com/badges/image/woahbase/alpine-openjdk11:aarch64.svg
