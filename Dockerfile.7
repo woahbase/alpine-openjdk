@@ -1,0 +1,33 @@
+# syntax=docker/dockerfile:1
+#
+ARG IMAGEBASE=frommakefile
+#
+FROM ${IMAGEBASE}
+#
+ENV \
+    JAVA_HOME=/usr/lib/jvm/java-1.7-openjdk \
+    LANG=C.UTF-8
+#
+RUN set -xe \
+    && apk add -uU --no-cache \
+        ca-certificates \
+        nss \
+    # openjdk7 unavailable in repos after v3.18
+    && { \
+        echo "http://dl-cdn.alpinelinux.org/alpine/v3.18/main"; \
+        echo "http://dl-cdn.alpinelinux.org/alpine/v3.18/community"; \
+        echo "http://dl-cdn.alpinelinux.org/alpine/v3.18/testing"; \
+    } > /etc/apk/repositories-v3.18 \
+    && apk add --no-cache --virtual .deps-runtime \
+        --repositories-file "/etc/apk/repositories-v3.18" \
+        openjdk7-jre \
+    && apk add --no-cache --virtual .deps-devel \
+        --repositories-file "/etc/apk/repositories-v3.18" \
+        openjdk7 \
+    && rm -rf /var/cache/apk/* /tmp/*
+#
+ENV \
+    PATH=${JAVA_HOME}/bin:${PATH}
+#
+ENTRYPOINT ["/usershell"]
+CMD ["java", "-version"]

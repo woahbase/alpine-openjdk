@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1
+#
+ARG IMAGEBASE=frommakefile
+#
+FROM ${IMAGEBASE}
+#
+ENV \
+    JAVA_HOME=/usr/lib/jvm/java-17-openjdk \
+    LANG=C.UTF-8
+#
+RUN set -xe \
+    && apk add -uU --no-cache \
+        ca-certificates \
+        nss \
+    && apk add --no-cache --virtual .deps-runtime \
+        openjdk17-jre \
+    && apk add --no-cache --virtual .deps-devel \
+        openjdk17 \
+    && rm -rf /var/cache/apk/* /tmp/*
+#
+ENV \
+    PATH=${JAVA_HOME}/bin:${PATH}
+#
+ENTRYPOINT ["/usershell"]
+CMD ["java", "-version"]
