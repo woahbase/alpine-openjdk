@@ -13,13 +13,23 @@
 [![dh_size:armhf][710]][760]
 [![dh_size:armv7l][709]][759]
 [![dh_size:x86_64][707]][757]
+<!--[![dh_size:i386][711]][761]-->
+<!--[![dh_size:ppc64le][713]][763]-->
+<!--[![dh_size:s390x][715]][765]-->
+<!--[![dh_size:loong64][712]][762]-->
+<!--[![dh_size:riscv64][714]][764]-->
 
 [![dh_pulls][805]][855]
 [![dh_stars][806]][856]
 [![dh_size:aarch64][808]][858]
 [![dh_size:armhf][810]][860]
 [![dh_size:armv7l][809]][859]
+[![dh_size:i386][811]][861]
+[![dh_size:ppc64le][813]][863]
+[![dh_size:s390x][815]][865]
 [![dh_size:x86_64][807]][857]
+<!--[![dh_size:loong64][812]][862]-->
+<!--[![dh_size:riscv64][814]][864]-->
 
 [![dh_pulls][905]][955]
 [![dh_stars][906]][956]
@@ -38,9 +48,14 @@
 [![dh_pulls][1105]][1155]
 [![dh_stars][1106]][1156]
 [![dh_size:aarch64][1108]][1158]
+[![dh_size:ppc64le][1113]][1163]
+[![dh_size:s390x][1115]][1165]
 [![dh_size:x86_64][1107]][1157]
-<!--[![dh_size:armhf][1110]][1160]
-[![dh_size:armv7l][1109]][1159]-->
+<!--[![dh_size:armhf][1110]][1160]-->
+<!--[![dh_size:armv7l][1109]][1159]-->
+<!--[![dh_size:i386][1111]][1161]-->
+<!--[![dh_size:loong64][1112]][1162]-->
+<!--[![dh_size:riscv64][1114]][1164]-->
 
 [![dh_pulls][1405]][1455]
 [![dh_stars][1406]][1456]
@@ -52,16 +67,26 @@
 [![dh_pulls][1705]][1755]
 [![dh_stars][1706]][1756]
 [![dh_size:aarch64][1708]][1758]
+[![dh_size:ppc64le][1713]][1763]
+[![dh_size:s390x][1715]][1765]
 [![dh_size:x86_64][1707]][1757]
-<!--[![dh_size:armhf][1710]][1760]
-[![dh_size:armv7l][1709]][1759]-->
+<!--[![dh_size:armhf][1710]][1760]-->
+<!--[![dh_size:armv7l][1709]][1759]-->
+<!--[![dh_size:i386][1711]][1761]-->
+<!--[![dh_size:loong64][1712]][1762]-->
+<!--[![dh_size:riscv64][1714]][1764]-->
 
 [![dh_pulls][2105]][2155]
 [![dh_stars][2106]][2156]
 [![dh_size:aarch64][2108]][2158]
+[![dh_size:ppc64le][2113]][2163]
+[![dh_size:riscv64][2114]][2164]
+[![dh_size:s390x][2115]][2165]
 [![dh_size:x86_64][2107]][2157]
-<!--[![dh_size:armhf][2110]][2160]
-[![dh_size:armv7l][2109]][2159]-->
+<!--[![dh_size:armhf][2110]][2160]-->
+<!--[![dh_size:armv7l][2109]][2159]-->
+<!--[![dh_size:i386][2111]][2161]-->
+<!--[![dh_size:loong64][2112]][2162]-->
 
 MultiArch Alpine Linux + S6 + GNU LibC + OpenJDK
 
@@ -95,13 +120,23 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [758]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=aarch64&ordering=last_updated
 [759]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=armv7l&ordering=last_updated
 [760]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=armhf&ordering=last_updated
+[761]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=i386&ordering=last_updated
+[762]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=loong64&ordering=last_updated
+[763]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=ppc64le&ordering=last_updated
+[764]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=riscv64&ordering=last_updated
+[765]: https://hub.docker.com/r/woahbase/alpine-openjdk7/tags?name=s390x&ordering=last_updated
 
-[705]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk7?color=brightgreen&style=flat-square&logo=docker&label=7.*
+[705]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk7?color=brightgreen&style=flat-square&logo=docker&label=(Deprecated)%207.*
 [706]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk7?color=brightgreen&style=flat-square&logo=docker&label=stars
 [707]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/x86_64?label=x86_64&color=brightgreen&style=flat-square&logo=docker
 [708]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
 [709]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/armv7l?label=armv7l&color=brightgreen&style=flat-square&logo=docker
 [710]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/armhf?label=armhf&color=brightgreen&style=flat-square&logo=docker
+[711]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/i386?label=i386&color=brightgreen&style=flat-square&logo=docker
+[712]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/loong64?label=loong64&color=brightgreen&style=flat-square&logo=docker
+[713]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/ppc64le?label=ppc64le&color=brightgreen&style=flat-square&logo=docker
+[714]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/riscv64?label=riscv64&color=brightgreen&style=flat-square&logo=docker
+[715]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk7/s390x?label=s390x&color=brightgreen&style=flat-square&logo=docker
 
 [855]: https://hub.docker.com/r/woahbase/alpine-openjdk8
 [856]: https://hub.docker.com/r/woahbase/alpine-openjdk8
@@ -109,6 +144,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [858]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=aarch64&ordering=last_updated
 [859]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=armv7l&ordering=last_updated
 [860]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=armhf&ordering=last_updated
+[861]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=i386&ordering=last_updated
+[862]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=loong64&ordering=last_updated
+[863]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=ppc64le&ordering=last_updated
+[864]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=riscv64&ordering=last_updated
+[865]: https://hub.docker.com/r/woahbase/alpine-openjdk8/tags?name=s390x&ordering=last_updated
 
 [805]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk8?color=brightgreen&style=flat-square&logo=docker&label=8.*
 [806]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk8?color=brightgreen&style=flat-square&logo=docker&label=stars
@@ -116,6 +156,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [808]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
 [809]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/armv7l?label=armv7l&color=brightgreen&style=flat-square&logo=docker
 [810]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/armhf?label=armhf&color=brightgreen&style=flat-square&logo=docker
+[811]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/i386?label=i386&color=brightgreen&style=flat-square&logo=docker
+[812]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/loong64?label=loong64&color=brightgreen&style=flat-square&logo=docker
+[813]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/ppc64le?label=ppc64le&color=brightgreen&style=flat-square&logo=docker
+[814]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/riscv64?label=riscv64&color=brightgreen&style=flat-square&logo=docker
+[815]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk8/s390x?label=s390x&color=brightgreen&style=flat-square&logo=docker
 
 [955]: https://hub.docker.com/r/woahbase/alpine-openjdk9
 [956]: https://hub.docker.com/r/woahbase/alpine-openjdk9
@@ -124,7 +169,7 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [959]: https://hub.docker.com/r/woahbase/alpine-openjdk9/tags?name=armv7l&ordering=last_updated
 [960]: https://hub.docker.com/r/woahbase/alpine-openjdk9/tags?name=armhf&ordering=last_updated
 
-[905]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk9?color=brightgreen&style=flat-square&logo=docker&label=9.*
+[905]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk9?color=brightgreen&style=flat-square&logo=docker&label=(Deprecated)%209.*
 [906]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk9?color=brightgreen&style=flat-square&logo=docker&label=stars
 [907]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk9/x86_64?label=x86_64&color=brightgreen&style=flat-square&logo=docker
 [908]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk9/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
@@ -138,7 +183,7 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1059]: https://hub.docker.com/r/woahbase/alpine-openjdk10/tags?name=armv7l&ordering=last_updated
 [1060]: https://hub.docker.com/r/woahbase/alpine-openjdk10/tags?name=armhf&ordering=last_updated
 
-[1005]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk10?color=brightgreen&style=flat-square&logo=docker&label=10.*
+[1005]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk10?color=brightgreen&style=flat-square&logo=docker&label=(Deprecated)%2010.*
 [1006]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk10?color=brightgreen&style=flat-square&logo=docker&label=stars
 [1007]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk10/x86_64?label=x86_64&color=brightgreen&style=flat-square&logo=docker
 [1008]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk10/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
@@ -151,6 +196,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1158]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=aarch64&ordering=last_updated
 [1159]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=armv7l&ordering=last_updated
 [1160]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=armhf&ordering=last_updated
+[1161]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=i386&ordering=last_updated
+[1162]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=loong64&ordering=last_updated
+[1163]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=ppc64le&ordering=last_updated
+[1164]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=riscv64&ordering=last_updated
+[1165]: https://hub.docker.com/r/woahbase/alpine-openjdk11/tags?name=s390x&ordering=last_updated
 
 [1105]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk11?color=brightgreen&style=flat-square&logo=docker&label=11.*
 [1106]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk11?color=brightgreen&style=flat-square&logo=docker&label=stars
@@ -158,6 +208,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1108]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
 [1109]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/armv7l?label=armv7l&color=brightgreen&style=flat-square&logo=docker
 [1110]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/armhf?label=armhf&color=brightgreen&style=flat-square&logo=docker
+[1111]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/i386?label=i386&color=brightgreen&style=flat-square&logo=docker
+[1112]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/loong64?label=loong64&color=brightgreen&style=flat-square&logo=docker
+[1113]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/ppc64le?label=ppc64le&color=brightgreen&style=flat-square&logo=docker
+[1114]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/riscv64?label=riscv64&color=brightgreen&style=flat-square&logo=docker
+[1115]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk11/s390x?label=s390x&color=brightgreen&style=flat-square&logo=docker
 
 [1455]: https://hub.docker.com/r/woahbase/alpine-openjdk14
 [1456]: https://hub.docker.com/r/woahbase/alpine-openjdk14
@@ -166,7 +221,7 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1459]: https://hub.docker.com/r/woahbase/alpine-openjdk14/tags?name=armv7l&ordering=last_updated
 [1460]: https://hub.docker.com/r/woahbase/alpine-openjdk14/tags?name=armhf&ordering=last_updated
 
-[1405]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk14?color=brightgreen&style=flat-square&logo=docker&label=14.*
+[1405]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk14?color=brightgreen&style=flat-square&logo=docker&label=(Deprecated)%2014.*
 [1406]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk14?color=brightgreen&style=flat-square&logo=docker&label=stars
 [1407]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk14/x86_64?label=x86_64&color=brightgreen&style=flat-square&logo=docker
 [1408]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk14/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
@@ -179,6 +234,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1758]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=aarch64&ordering=last_updated
 [1759]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=armv7l&ordering=last_updated
 [1760]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=armhf&ordering=last_updated
+[1761]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=i386&ordering=last_updated
+[1762]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=loong64&ordering=last_updated
+[1763]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=ppc64le&ordering=last_updated
+[1764]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=riscv64&ordering=last_updated
+[1765]: https://hub.docker.com/r/woahbase/alpine-openjdk17/tags?name=s390x&ordering=last_updated
 
 [1705]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk17?color=brightgreen&style=flat-square&logo=docker&label=17.*
 [1706]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk17?color=brightgreen&style=flat-square&logo=docker&label=stars
@@ -186,6 +246,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [1708]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
 [1709]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/armv7l?label=armv7l&color=brightgreen&style=flat-square&logo=docker
 [1710]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/armhf?label=armhf&color=brightgreen&style=flat-square&logo=docker
+[1711]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/i386?label=i386&color=brightgreen&style=flat-square&logo=docker
+[1712]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/loong64?label=loong64&color=brightgreen&style=flat-square&logo=docker
+[1713]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/ppc64le?label=ppc64le&color=brightgreen&style=flat-square&logo=docker
+[1714]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/riscv64?label=riscv64&color=brightgreen&style=flat-square&logo=docker
+[1715]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk17/s390x?label=s390x&color=brightgreen&style=flat-square&logo=docker
 
 [2155]: https://hub.docker.com/r/woahbase/alpine-openjdk21
 [2156]: https://hub.docker.com/r/woahbase/alpine-openjdk21
@@ -193,6 +258,11 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [2158]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=aarch64&ordering=last_updated
 [2159]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=armv7l&ordering=last_updated
 [2160]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=armhf&ordering=last_updated
+[2161]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=i386&ordering=last_updated
+[2162]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=loong64&ordering=last_updated
+[2163]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=ppc64le&ordering=last_updated
+[2164]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=riscv64&ordering=last_updated
+[2165]: https://hub.docker.com/r/woahbase/alpine-openjdk21/tags?name=s390x&ordering=last_updated
 
 [2105]: https://img.shields.io/docker/pulls/woahbase/alpine-openjdk21?color=brightgreen&style=flat-square&logo=docker&label=21.*
 [2106]: https://img.shields.io/docker/stars/woahbase/alpine-openjdk21?color=brightgreen&style=flat-square&logo=docker&label=stars
@@ -200,3 +270,8 @@ Maintained (or sometimes a lack thereof?) by [WOAHBase][110].
 [2108]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/aarch64?label=aarch64&color=brightgreen&style=flat-square&logo=docker
 [2109]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/armv7l?label=armv7l&color=brightgreen&style=flat-square&logo=docker
 [2110]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/armhf?label=armhf&color=brightgreen&style=flat-square&logo=docker
+[2111]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/i386?label=i386&color=brightgreen&style=flat-square&logo=docker
+[2112]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/loong64?label=loong64&color=brightgreen&style=flat-square&logo=docker
+[2113]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/ppc64le?label=ppc64le&color=brightgreen&style=flat-square&logo=docker
+[2114]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/riscv64?label=riscv64&color=brightgreen&style=flat-square&logo=docker
+[2115]: https://img.shields.io/docker/image-size/woahbase/alpine-openjdk21/s390x?label=s390x&color=brightgreen&style=flat-square&logo=docker
